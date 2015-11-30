@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36DA8C801C0ACCFE003B73AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA8C7F1C0ACCFE003B73AE /* AppDelegate.swift */; };
 		36DA8C821C0ACCFE003B73AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA8C811C0ACCFE003B73AE /* ViewController.swift */; };
 		36DA8C851C0ACCFE003B73AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36DA8C831C0ACCFE003B73AE /* Main.storyboard */; };
 		36DA8C871C0ACCFE003B73AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36DA8C861C0ACCFE003B73AE /* Assets.xcassets */; };
 		36DA8C8A1C0ACCFE003B73AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36DA8C881C0ACCFE003B73AE /* LaunchScreen.storyboard */; };
+		36DA8C921C0ACDE6003B73AE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DA8C911C0ACDE6003B73AE /* FBSDKCoreKit.framework */; };
+		36DA8C941C0ACE1E003B73AE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DA8C931C0ACE1E003B73AE /* FBSDKLoginKit.framework */; };
+		36DA8C961C0AD2FD003B73AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA8C7F1C0ACCFE003B73AE /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		36DA8C861C0ACCFE003B73AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36DA8C891C0ACCFE003B73AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36DA8C8B1C0ACCFE003B73AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36DA8C911C0ACDE6003B73AE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		36DA8C931C0ACE1E003B73AE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DA8C941C0ACE1E003B73AE /* FBSDKLoginKit.framework in Frameworks */,
+				36DA8C921C0ACDE6003B73AE /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,8 @@
 		36DA8C731C0ACCFD003B73AE = {
 			isa = PBXGroup;
 			children = (
+				36DA8C931C0ACE1E003B73AE /* FBSDKLoginKit.framework */,
+				36DA8C911C0ACDE6003B73AE /* FBSDKCoreKit.framework */,
 				36DA8C7E1C0ACCFE003B73AE /* FBlogin */,
 				36DA8C7D1C0ACCFE003B73AE /* Products */,
 			);
@@ -50,6 +58,7 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		36DA8C7E1C0ACCFE003B73AE /* FBlogin */ = {
 			isa = PBXGroup;
@@ -96,7 +105,6 @@
 				TargetAttributes = {
 					36DA8C7B1C0ACCFD003B73AE = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = L82GG62R84;
 					};
 				};
 			};
@@ -136,8 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DA8C961C0AD2FD003B73AE /* AppDelegate.swift in Sources */,
 				36DA8C821C0ACCFE003B73AE /* ViewController.swift in Sources */,
-				36DA8C801C0ACCFE003B73AE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +256,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FBlogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fanny.FBlogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -259,7 +269,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FBlogin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fanny.FBlogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +297,7 @@
 				36DA8C901C0ACCFE003B73AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
